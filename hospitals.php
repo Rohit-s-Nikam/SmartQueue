@@ -1,3 +1,4 @@
-<?php $root=''; $GLOBALS['page']='hospitals'; require __DIR__.'/includes/helpers.php'; public_start('Hospitals','hospitals'); ?>
-<div id="root"><div class="shimmer" style="height:420px;margin:24px 5vw"></div></div>
-<?php public_end(); ?>
+<?php $root='../'; $GLOBALS['page']='s-hosp'; require __DIR__.'/../includes/helpers.php';
+app_start('Hospitals','super-admin','hospitals','Status, ratings and complaints per hospital'); ?>
+<div id="root"><div class="shimmer" style="height:240px"></div></div>
+<?php app_end('super-admin'); ?>
