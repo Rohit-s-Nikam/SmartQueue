@@ -1,0 +1,8 @@
+<?php $root=''; require __DIR__.'/includes/helpers.php'; public_start('How it works','how'); ?>
+<section class="phero" style="--bg-img:url('assets/images/hero-banner.png')"><?= back_link() ?><h1>How SmartQueue works</h1><p>From booking to consultation in five clear steps, for patients and hospital staff alike.</p></section>
+<section class="sec-pad"><div class="sec-in text-center"><h2 class="sec-h">Five steps to a calmer visit</h2><p class="sec-sub">The same token line serves online bookings and walk-ins.</p>
+<div class="row g-4"><?php foreach([['search','Find a hospital','Search by city, department or doctor.'],['calendar-check','Pick a slot','Choose date and time that is still free.'],['wallet2','Pay booking fee','A small booking fee confirms the slot.'],['qr-code','Get your token','A token number and a QR code are generated.'],['hospital','Check in','Show the QR at reception and wait for your number.']] as $i=>$s): ?>
+<div class="col-6 col-md-4 col-lg reveal"><div class="tile"><div class="step mb-2"><?= $i+1 ?></div><i class="bi bi-<?= $s[0] ?> big"></i><h3><?= esc($s[1]) ?></h3><p><?= esc($s[2]) ?></p></div></div><?php endforeach; ?></div>
+<a class="btn btn-sq btn-lg mt-4" href="booking.php">Try the booking flow</a></div></section>
+<section class="sec-pad alt"><div class="sec-in"><h2 class="sec-h">Behind the counter</h2><p class="sec-sub">What each team member sees.</p><div class="grid5"><?php foreach($NAV as $r=>$c): ?><a class="role-card" href="<?= esc(role_home($r)) ?>"><i class="bi bi-<?= role_icon($r) ?>"></i><b><?= esc($c['label']) ?></b><span><?= esc(role_blurb($r)) ?></span></a><?php endforeach; ?></div></div></section>
+<?php public_end(); ?>
